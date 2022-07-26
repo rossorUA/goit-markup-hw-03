@@ -37,7 +37,6 @@
  
 	padding-left: 15px;
 	padding-right: 15px;
-	/* outline: 1px solid blue; */
  }
  
  .section-title {
@@ -73,7 +72,6 @@
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
  }
- /* general resset of styles to do less work in each section  */
  h1,
  h2,
  h3,
@@ -98,9 +96,7 @@
  
  .header-navigation {
 	display: flex;
-	/* выравниваем относительно поперечной оси, то есть высоты*/
 	align-items: center;
-	/*растягиваем по нужным сторонам  */
 	justify-content: center;
  }
  
@@ -127,14 +123,11 @@
 	margin-left: 93px;
  }
  
- /* очистка крайней геометрии: один из вариантов .header-item: last child {
-	margin-right: 0;/* .header-item+header-item{
-	margin-left: 40px; или как я сделала  */
+ 
  .header-item:not(:last-child) {
 	margin-right: 40px;
  }
  
- /* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
  .header-link {
 	/* geometry */
 	display: flex;
@@ -344,7 +337,6 @@
 	letter-spacing: 0.06em;
 	color: var(--main-title-color);
 	background-color: var(--second-button-color);
-	/* cursor: pointer; */
  }
  
  .order-service-btn:active,
@@ -376,10 +368,7 @@
 	text-transform: uppercase;
 	color: var(--title-color);
  }
- /* .features-text {
-	margin-top: 0;
-	margin-bottom: 0;
- } */
+ 
  /* -------------------------------------specialities----------- */
  
  .specialities-list {
@@ -431,7 +420,6 @@
  .team-text {
 	margin-top: 0;
 	margin-bottom: 0px;
-	/* padding-bottom: 30px; */
  
 	font-size: 16px;
 	line-height: 1.19;
