@@ -1,0 +1,441 @@
+/* -------------------------------------CSS Custom Properties------------------------- */
+:root {
+	--main-title-color: #ffffff;
+	--title-color: #212121;
+	--main-text-color: #757575;
+	--main-accent-color: #2196f3;
+	--logo-color: #000000;
+	--footer-contacts-color: #ffffff99;
+	--main-background-color: #e5e5e5;
+	--secondary-background-color: #ffffff;
+	--header-color: #ffffff;
+	--footer-color: #2f303a;
+	--background-section: #f5f4fa;
+	--first-button-color: #f5f4fa;
+	--second-button-color: #2196f3;
+	--card-border-color: #eeeeee;
+	--project-item-gap: 30px;
+ }
+ 
+ /*--------------------------Service Classes--------------------------------------------*/
+ /* NEW Utility !!! should be first/higher in the document  */
+ .list {
+	/* ressets all the things given/set by browser */
+	margin: 0;
+	padding: 0;
+	list-style: none;
+ }
+ .link {
+	text-decoration: none;
+	color: inherit;
+ }
+ 
+ .container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+ 
+	padding-left: 15px;
+	padding-right: 15px;
+	/* outline: 1px solid blue; */
+ }
+ 
+ .section-title {
+	margin-top: 0;
+	margin-bottom: 50px;
+	/* ok? */
+ 
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--title-color);
+ }
+ .section {
+	padding-bottom: 94px;
+	padding-top: 94px;
+ }
+ 
+ /* --------------------------------Main Selectors------------------------------------- */
+ 
+ button {
+	cursor: pointer;
+ }
+ body {
+	/* margin: 0; */
+	background-color: var(--secondary-background-color);
+	font-family: "Roboto", sans-serif;
+	/* font-style: normal; */
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: var(--main-text-color);
+ }
+ /* general resset of styles to do less work in each section  */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+	margin: 0;
+	padding: 0;
+ }
+ /* --------------------------------Header--------------------------------------------- */
+ .header {
+	background-color: var(--header-color);
+	border-bottom: 1px solid #ececec;
+ }
+ 
+ .nav-holder {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+ }
+ 
+ .header-navigation {
+	display: flex;
+	/* выравниваем относительно поперечной оси, то есть высоты*/
+	align-items: center;
+	/*растягиваем по нужным сторонам  */
+	justify-content: center;
+ }
+ 
+ .header-logo {
+	font-family: "Raleway", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	word-spacing: -6px;
+	padding-top: 24px;
+	padding-bottom: 25px;
+ }
+ .header-web {
+	color: var(--main-accent-color);
+ }
+ .header-studio {
+	color: var(--logo-color);
+ }
+ 
+ .header-list {
+	display: flex;
+	margin-left: 93px;
+ }
+ 
+ /* очистка крайней геометрии: один из вариантов .header-item: last child {
+	margin-right: 0;/* .header-item+header-item{
+	margin-left: 40px; или как я сделала  */
+ .header-item:not(:last-child) {
+	margin-right: 40px;
+ }
+ 
+ /* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
+ .header-link {
+	/* geometry */
+	display: flex;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	/* font + stiles  */
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: var(--title-color);
+	/* decore */
+ }
+ 
+ .header-link:hover,
+ .header-link:focus {
+	color: var(--main-accent-color);
+ }
+ .header-contacts-list .link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: var(--main-text-color);
+ }
+ .header-contacts-list .link:hover,
+ .header-contacts-list .link:focus {
+	color: var(--main-accent-color);
+ }
+ 
+ .header-contacts-list {
+	display: flex;
+ }
+ .header-contacts + .header-contacts {
+	margin-left: 12px;
+ }
+ 
+ .header-contacts {
+	padding-top: 32px;
+	padding-bottom: 32px;
+ }
+ 
+ /* ----------------------------------------------------Footer----------------------------------------------- */
+ .footer {
+	background-color: var(--footer-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
+ }
+ 
+ /*------------------------------------------------------ contact links---------------------------------------- */
+ 
+ .footer-address-link {
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: var(--footer-contacts-color);
+ }
+ .footer-address-link:hover,
+ .footer-address-link:focus {
+	color: var(--main-title-color);
+ }
+ /*--------------------------------------------------------logo------------------------------------------------*/
+ .footer-logo {
+	display: inline-block;
+	margin-bottom: 20px;
+ 
+	font-family: "Raleway", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	/*--------------------------------------------add negative word-spacing to bring letters together----------*/
+	word-spacing: -5px;
+ }
+ .footer-contact-item:not(:last-child) {
+	margin-bottom: 9px;
+ }
+ .footer-web {
+	color: var(--main-accent-color);
+ }
+ .footer-studio {
+	color: var(--main-title-color);
+ }
+ /* ------------------------------------------------MAIN SECTION PORTFOLIO---------------------------- */
+ 
+ /* ------------------------------------------------Filters-------------------------------------------- */
+ .filters-btn {
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--title-color);
+	background-color: var(--first-button-color);
+	cursor: pointer;
+	border-radius: 4px;
+	border-color: transparent;
+	padding: 6px 22px;
+ }
+ 
+ .filters-btn:hover,
+ .filters-btn:focus,
+ .filters-btn:active {
+	color: var(--main-title-color);
+	background-color: var(--second-button-color);
+ }
+ 
+ .filters {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 50px;
+ }
+ .filters-item:not(:last-child) {
+	margin-right: 8px;
+ }
+ /*------------------------------------------Portfolio: Projects---------------------------------------- */
+ .portfolio-title {
+	display: none;
+ }
+ .projects {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(-1 * var(--project-item-gap));
+	margin-top: calc(-1 * var(--project-item-gap));
+ }
+ 
+ .projects-item {
+	flex-basis: calc(100% / 3 - var(--project-item-gap));
+	margin-left: var(--project-item-gap);
+	margin-top: var(--project-item-gap);
+	outline: 1px solid var(--card-border-color);
+ }
+ .projects-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: var(--title-color);
+ }
+ 
+ .projects-text {
+	margin-top: 4px;
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.03em;
+	color: var(--main-text-color);
+ }
+ 
+ .projects-content {
+	padding: 20px 24px;
+ }
+ .projects-item {
+	background-color: var(--secondary-background-color);
+ }
+ /* -----------------------------------------------Main WEB STUDIO ------------------------------------------- */
+ /* -----------------------------Heroe/ Banner/ order a service ------------------------------------------------ */
+ 
+ .order-service {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-color: var(--footer-color);
+	text-align: center;
+ }
+ .order-service-title {
+	/* margin-top: 0; */
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 696px;
+ 
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+ 
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--main-title-color);
+ }
+ .order-service-btn {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid var(--second-button-color);
+	border-color: transparent;
+	align-self: center;
+	margin: 0 auto;
+	width: 200px;
+	height: 50px;
+	justify-content: center;
+ 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+ 
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.06em;
+	color: var(--main-title-color);
+	background-color: var(--second-button-color);
+	/* cursor: pointer; */
+ }
+ 
+ .order-service-btn:active,
+ .order-service-btn:focus {
+	color: var(--main-title-color);
+ }
+ /* -----------------------------------------------Our Features------------------------------------------- */
+ .features {
+	padding-bottom: 0;
+ }
+ .features-title {
+	display: none;
+ }
+ 
+ .features-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+ }
+ 
+ .features-item {
+	width: 270px;
+ }
+ .features-item-title {
+	/* margin-top: 0; */
+	margin-bottom: 10px;
+	font-weight: bold;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--title-color);
+ }
+ /* .features-text {
+	margin-top: 0;
+	margin-bottom: 0;
+ } */
+ /* -------------------------------------specialities----------- */
+ 
+ .specialities-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(-1 * var(--project-item-gap));
+	margin-top: calc(-1 * var(--project-item-gap));
+ }
+ 
+ .specialities-item {
+	flex-basis: calc(100% / 3 - var(--project-item-gap));
+	margin-left: var(--project-item-gap);
+	margin-top: var(--project-item-gap);
+ }
+ /* ----------------------------------------------Our Team----------------------------------------------- */
+ .team {
+	background-color: var(--background-section);
+ }
+ 
+ .team-list {
+	display: flex;
+	/* flex-wrap: wrap; */
+	margin-left: calc(-1 * var(--project-item-gap));
+	margin-top: calc(-1 * var(--project-item-gap));
+ }
+ 
+ .team-card {
+	padding-top: 30px;
+	padding-bottom: 30px;
+ }
+ .team-item {
+	background-color: var(--secondary-background-color);
+	outline: 1px solid var(--card-border-color);
+	border-radius: 4px;
+	margin-top: var(--project-item-gap);
+	margin-left: var(--project-item-gap);
+ }
+ .team-person {
+	margin-top: 0px;
+	margin-bottom: 10px;
+ 
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--title-color);
+ }
+ .team-text {
+	margin-top: 0;
+	margin-bottom: 0px;
+	/* padding-bottom: 30px; */
+ 
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--main-text-color);
+ }
