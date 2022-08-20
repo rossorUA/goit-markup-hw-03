@@ -39,7 +39,7 @@ img {
   display: block;
 }
 
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -48,7 +48,7 @@ img {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
-}
+} */
 
 body {
   background-color: var(--white-color);
@@ -64,7 +64,7 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .section {
